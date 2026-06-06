@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+
+<center>
+
+    <h1> Dashboard </h1>
+
+    <h2>Welcome <%= user %></h2>
+
+    <p>
+        <a href="/addCourse">Add Course</a>
+        |
+        <a href="/logout">Logout</a>
+    </p>
+
+    <br>
+
+    <table border="1" cellpadding="10">
+
+        <tr>
+            <th>Course Name</th>
+            <th>Trainer Name</th>
+            <th>Duration</th>
+            <th>Fees</th>
+            <th>Actions</th>
+        </tr>
+
+        <% data.forEach(d => { %>
+
+        <tr>
+
+            <td><%= d.cname %></td>
+            <td><%= d.tname %></td>
+            <td><%= d.duration %></td>
+            <td><%= d.fees %></td>
+
+            <td>
+
+                <a href="/edit/<%= d._id %>">
+                    Update
+                </a>
+
+                |
+
+                <form
+                    action="/delete/<%= d._id %>?_method=DELETE"
+                    method="POST"
+                    style="display:inline;">
+
+                    <input
+                        type="submit"
+                        value="Delete">
+
+                </form>
+
+            </td>
+
+        </tr>
+
+        <% }) %>
+
+    </table>
+
+</center>
+
+</body>
+</html>

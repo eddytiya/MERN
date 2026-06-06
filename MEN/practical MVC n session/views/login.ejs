@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Login</title>
+</head>
+<body>
+
+<center>
+
+    <h1> Login </h1>
+
+    <form action="/login" method="post">
+
+        <table>
+
+            <tr>
+                <td>Username:</td>
+                <td>
+                    <input type="text" name="name" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Password:</td>
+                <td>
+                    <input type="password" name="password" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Login">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+    <br>
+
+    <p>
+        Don't have an account?
+        <a href="/register">Register</a>
+    </p>
+
+</center>
+
+</body>
+</html>

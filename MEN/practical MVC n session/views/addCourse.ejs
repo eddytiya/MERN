@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Course</title>
+</head>
+<body>
+
+<center>
+
+    <h1>ADD course</h1>
+
+    <form action="/addCourse" method="POST">
+
+        <table>
+
+            <tr>
+                <td>cName:</td>
+                <td>
+                    <input type="text" name="cname" required>
+                </td>
+            </tr>
+            <tr>
+                <td>tName:</td>
+                <td>
+                    <input type="text" name="tname" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Duration:</td>
+                <td>
+                    <input type="text" name="duration" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Fees:</td>
+                <td>
+                    <input type="number" name="fees" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Add Course">
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+    <br>
+
+    <a href="/dashboard">Back to Dashboard</a>
+
+</center>
+
+</body>
+</html>

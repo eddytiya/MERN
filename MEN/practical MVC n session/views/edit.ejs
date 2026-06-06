@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update</title>
+</head>
+<body>
+
+<center>
+
+    <h1>Update </h1>
+
+    <form action="/update/<%= data._id %>?_method=PUT" method="POST">
+
+        <table>
+
+            <tr>
+                <td>cName:</td>
+                <td>
+                    <input
+                        type="text"
+                        name="cname"
+                        value="<%= data.cname %>"
+                        required>
+                </td>
+            </tr>
+            <tr>
+                <td>tName:</td>
+                <td>
+                    <input
+                        type="text"
+                        name="tname"
+                        value="<%= data.tname %>"
+                        required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Duration:</td>
+                <td>
+                    <input
+                        type="text"
+                        name="duration"
+                        value="<%= data.duration %>"
+                        required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>fees:</td>
+                <td>
+                    <input
+                        type="number"
+                        name="fees"
+                        value="<%= data.fees %>"
+                        required>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Update Course">
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+    <br>
+
+    <a href="/dashboard">Back to Dashboard</a>
+
+</center>
+
+</body>
+</html>
